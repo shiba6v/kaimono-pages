@@ -2,6 +2,24 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<script>
+  if (location.origin === 'https://shiba6v.github.io' && location.pathname.startsWith('/kaimono-pages/')) {
+    const measurementId = 'G-6VBVNM0112';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', measurementId, {
+      cookie_prefix: 'kaimono_pages',
+      cookie_path: '/kaimono-pages/',
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    });
+    const tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+    document.head.append(tag);
+  }
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>カイモノ｜お店ごとに分けて書ける買い物リスト</title>
 <meta name="description" content="品名を書いて改行するだけで次の品物を書ける、iPhoneの買い物リストです。スーパーやドラッグストアなど、お店ごとにリストを分けられます。アカウント登録は不要です。">
@@ -70,5 +88,6 @@
     <a href="https://c2mtmohroc.execute-api.ap-northeast-1.amazonaws.com/prod/terms">利用規約</a>
   </nav>
 </footer>
+<p class="site-analytics">このサイトはアクセス解析にGoogle Analyticsを使用しています。<a href="https://policies.google.com/technologies/partner-sites?hl=ja">Googleによるデータの取り扱い</a></p>
 </body>
 </html>

@@ -2,6 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>
+  if (location.origin === 'https://shiba6v.github.io' && location.pathname.startsWith('/kaimono-pages/')) {
+    const measurementId = 'G-6VBVNM0112';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', measurementId, {
+      cookie_prefix: 'kaimono_pages',
+      cookie_path: '/kaimono-pages/',
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    });
+    const tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+    document.head.append(tag);
+  }
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kaimono — a shopping list for each store</title>
 <meta name="description" content="A plain shopping list for iPhone. Type an item, press Return, and the next line is ready. Keep a separate list for each store. No account needed.">
@@ -70,5 +88,6 @@
     <a href="https://c2mtmohroc.execute-api.ap-northeast-1.amazonaws.com/prod/terms">Terms of Use</a>
   </nav>
 </footer>
+<p class="site-analytics">This site uses Google Analytics to count visits. <a href="https://policies.google.com/technologies/partner-sites?hl=en">How Google uses data</a></p>
 </body>
 </html>
